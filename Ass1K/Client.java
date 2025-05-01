@@ -15,7 +15,13 @@ public class Client {
 
             System.out.println("Enter num2 ");
             int b = sc.nextInt();
+            sc.nextLine();
 
+            System.out.println("Enter str1 ");
+            String str1 = sc.nextLine();
+
+            System.out.println("Enter str2 ");
+            String str2 = sc.nextLine();
             
 
             System.out.println("Add is " + serverIntf.addition(a, b));
@@ -30,17 +36,26 @@ public class Client {
 
             System.out.println("squar root is " + serverIntf.squareroot(b));
 
-            System.out.println("Enter str1 ");
-            String str1 = sc.nextLine();
+         
 
-            System.out.println("Enter str2 ");
-            String str2 = sc.nextLine();
+            System.out.println("Palindrome: ");
+            boolean pal=serverIntf.palindrome(str1);
+            if(pal){
+                System.out.println("String is palindrome ");
+            }
+            else{
+                System.out.println("String is not palindrome ");
+            }
 
-            System.out.println("Palindrome of string is ");
-            serverIntf.palindrome(str1);
 
             System.out.println("String is equal or not");
-            serverIntf.isequalstring(str1, str2);
+            boolean eq=serverIntf.isequalstring(str1, str2);
+            if(eq){
+                System.out.println("Strings are equal");
+            }
+            else{
+                System.out.println("Strings are not equal");
+            }
 
             System.out.println("Strings concatenation ");
             String res=serverIntf.concatenate(str1, str2);

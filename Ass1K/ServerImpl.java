@@ -30,22 +30,22 @@ public class ServerImpl extends UnicastRemoteObject implements ServerIntf {
         return (int) (Math.sqrt(a));
     }
 
-    public void palindrome(String str) throws RemoteException {
+    public boolean palindrome(String str) throws RemoteException {
         StringBuilder sb = new StringBuilder(str);
         sb.reverse();
 
         if (str.equals(sb.toString()))
-            System.out.println("String is Palindrome!");
+            return true;
         else
-            System.out.println("String is Not Palindrome!");
+            return false;
 
     }
 
-    public void isequalstring(String str1, String str2) throws RemoteException {
+    public boolean isequalstring(String str1, String str2) throws RemoteException {
         if (str1.equals(str2))
-            System.out.println("String is equal!");
+             return true;
         else
-            System.out.println("String is not equal!");
+             return false;
     }
     public String concatenate(String str1, String str2) throws RemoteException {
            return str1 + str2;

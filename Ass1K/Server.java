@@ -13,7 +13,7 @@ public class Server {
 
         } catch (Exception e) {
             // Handle any exceptions occurred during the execution
-            System.out.println("Exeption Occurred at server!" + e.getMessage());
+            System.out.println("Eception Occurred at server!" + e.getMessage());
         }
     }
 

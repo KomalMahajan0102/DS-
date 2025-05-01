@@ -14,9 +14,9 @@ interface ServerIntf extends Remote {
 
     public int squareroot(int a) throws RemoteException;
 
-    public void palindrome(String str) throws RemoteException;
+    public boolean palindrome(String str) throws RemoteException;
 
-    public void isequalstring(String str1, String str2) throws RemoteException;
+    public boolean isequalstring(String str1, String str2) throws RemoteException;
 
     public String concatenate(String str1, String str2) throws RemoteException;
 
