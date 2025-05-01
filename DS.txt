@@ -1,0 +1,103 @@
+
+Pre-requisites:
+
+1. Install JDK-8
+
+        sudo apt-get remove openjdk*
+        sudo apt update
+        sudo apt install openjdk-8-jdk openjdk-8-jre
+    
+2. Download [MPJ Express](https://sourceforge.net/projects/mpjexpress/files/releases/mpj-v0_44.tar.gz/download) and extract in the Downloads dir         
+ 
+ 3. Install Apache Netbeans
+            
+         sudo apt update && sudo apt upgrade
+         sudo snap install netbeans --classic
+
+
+📝 Assignment 1 - Multi-threaded Client/Server Process Communication using RMI
+
+Implement multi-threaded client/server Process communication using RMI.
+
+
+terminal 1:
+javac *.java
+rmiregistry
+
+terminal 2:
+java server
+
+terminal 3:
+java client
+
+
+💡 Assignment 2 - Distributed Application using CORBA
+
+Develop any distributed application using CORBA to demonstrate object brokering.
+(Calculator or String operations)
+
+
+Terminal 1:
+
+    idlj -fall ReverseModule.idl
+    javac *.java ReverseModule/*.java
+    orbd -ORBInitialPort 1056&
+    java ReverseServer -ORBInitialPort 1056& 
+
+Terminal 2:
+
+    java ReverseClient -ORBInitialPort 1056 -ORBInitialHost localhost
+
+
+🌐 Assignment 3 - Distributed System for Array Sum Calculation
+
+Develop a distributed system, to find sum of N elements in an array by distributing N/n elements to n
+number of processors MPI or OpenMP. Demonstrate by displaying the intermediate sums calculated
+at different processors.
+
+
+
+Terminal:
+
+    export MPJ_HOME=/home/ubuntu/Downloads/mpj-v0_44
+    export PATH=$MPJ_HOME/bin:$PATH
+    javac -cp $MPJ_HOME/lib/mpj.jar ArrSum.java
+    $MPJ_HOME/bin/mpjrun.sh -np 4 ArrSum
+
+//Write system instead of ubuntu if error occurs or name of system
+
+
+⏰ Assignment 4 - Berkeley Algorithm for Clock Synchronization
+
+Implement Berkeley algorithm for clock synchronization.
+
+Terminal 1:
+
+    python3 client.py
+
+
+Terminal 2:
+
+    python3 server.py
+
+🔄 Assignment 5 - Token Ring based Mutual Exclusion Algorithm
+
+Implement token ring based mutual exclusion algorithm.
+
+Terminal
+
+    javac Tring.java
+    java Tring
+
+
+🎉 Assignment 6 - Leader Election Algorithms
+
+Implement Bully and Ring algorithm for leader election.
+
+Terminal
+
+    javac Bully.java
+    java Bully
+    javac Ring.java
+    java Ring
+
